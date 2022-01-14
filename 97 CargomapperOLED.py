@@ -85,8 +85,6 @@ while True:
     print("\r\n\r\nPacket No #{}".format(cnt))
     
     my_sentence = uart1.readline()
-    #my_sentence = (b"$GNGGA,215439.000,1348.3435,N,10030.7016,E,1,08,1.5,25.7,M,0.0,M,,*4B\r\n")
-    #my_sentence = (b"$GNGGA,215439.000,1348.3435,N,10030.7016,E,5,15,1.1,470.50,M,45.65,M,,*75\r\n")
     print(my_sentence)
     for x in str(my_sentence):
         my_gps.update(x)
