@@ -4,7 +4,7 @@ function Decoder(bytes, port) {
   if (port === 2) 
   { 
     decoded.bat = (bytes[1] << 8) | bytes[0];
-    decoded.cpu_temp = (bytes[3] << 8) | bytes[2];
+    decoded.speed = (bytes[3] << 8) | bytes[2];
     decoded.latitude = (bytes[7]<<24 | bytes[6]<<16 | bytes[5]<<8 | bytes[4]) / 1000000;
     decoded.longitude = (bytes[11]<<24 | bytes[10]<<16 | bytes[9]<<8 | bytes[8]) / 1000000;
     decoded.altitude = 2;
